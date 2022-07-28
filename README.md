@@ -1,70 +1,76 @@
-# Getting Started with Create React App
+# Module : React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+`Jour 8`
 
-## Available Scripts
+## Vinted
 
-In the project directory, you can run:
+### URL.s
 
-### `yarn start`
+My React App : [![Netlify Status](https://api.netlify.com/api/v1/badges/442c11d2-e86f-4974-b2ac-c08e8b233569/deploy-status)]()
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+My BackEnd : [![Heroku](https://img.shields.io/badge/Heroku-%23430098.svg?style=flat&logo=heroku&logoColor=white)]()
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Demo: [![Netlify](https://img.shields.io/badge/Netlify-%23000000.svg?style=flat&logo=netlify&logoColor=#00C7B7)](https://lereacteur-vinted.netlify.app/)
 
-### `yarn test`
+BackEnd de secours : [![Heroku](https://img.shields.io/badge/Heroku-%23430098.svg?style=flat&logo=heroku&logoColor=white)](https://lereacteur-vinted-api.herokuapp.com/offers)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+> Méthode HTTP : `GET`
 
-### `yarn build`
+### RoadMap
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- 1/ Nous allons commencer par afficher la liste des menus sur la page.
+- 2/ Nous nous concentrerons donc uniquement sur la mise en place de la récupération des données de l'API et de la feuille de styles.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Interactions
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Il sera possible pour l'utilisateur de choisir une annonce pour se rendre sur la page de celle-ci. Nous devrons mettre en place de la navigation grâce à React Router.
+- Nous devrons mettre en page la barre de recherche dans le Header sans la travailler pour le moment sur la recherche en elle-même.
 
-### `yarn eject`
+### Consigne.s // RoadMap
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- [ ] Mettre en place React Router
+- [ ] Créer les pages Home et Offer avec un lien permettant de passer d'une page à l'autre et ainsi tester la navigation
+- [ ] Créer un composant Header dans lequel figurera le logo et trois boutons (s'inscrire, se connecter et vends tes articles ).
+- [x] Aucune intéraction dans ce composant pour l'instant !
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+#### Route "Home"
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- [ ] Réaliser l'intégration HTML (de la page Home dans un premier temps), sans trop de CSS
+- [x] Ne pas essayer d'intégrer la forme qui permet de donner un effet "déchiré" à l'image du hero (BONUS)
+- [ ] Créer les états
+- [ ] Ajouter les interactions
+- [ ] Réaliser le CSS
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+#### Route "Offer"
 
-## Learn More
+- [ ] Afficher le descriptif d'une annonce.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Resultat attendu
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<a href="https://lereacteur-react-deliveroo.netlify.com/" target="_blank">
+<img align="center" height="490em" src="./src/img/Screenshot.png"/>
+</a>
 
-### Code Splitting
+### Bonus
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+#### [ ] Pagination (Vinted - Home)
 
-### Analyzing the Bundle Size
+Permettre à l'utilisateur de parcourir les pages de résultats. L'API possède des paramètres skip et limit qui vous seront utiles pour récupérer seulement une partie des annonces de la base de données.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Exemples :
 
-### Making a Progressive Web App
+- Pour afficher la première page de résultats : https://lereacteur-vinted-api.herokuapp.com/offers?page=1&limit=8
+- Pour afficher la deuxième page de résultats : https://lereacteur-vinted-api.herokuapp.com/offers?page=2&limit=8
+- Pour afficher la troisième page de résultats : https://lereacteur-vinted-api.herokuapp.com/offers?page=3&limit=8
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Note : Cette route permet aussi de récupérer le nombre d'annonces total dans la propriété count. Cette valeur aidera à calculer le nombre de pages maximum.
 
-### Advanced Configuration
+#### [ ] Effet "déchiré" du hero (Vinted - Home)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- Récupérez l'image sur https://www.vinted.fr/ pour l'intégrer au projet !
 
-### Deployment
+#### [ ] Carousel (Vinted - Offer)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Si les annonces possèdent plusieurs images, implémenter `react-multi-carousel` pour implémenter un carousel d'images.
 
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[![LeReacteur](https://img.shields.io/badge/Make_with_Le_Reacteur.io-5C47D3?style=flat&logo=React&logoColor=white)](https://github.com/lereacteur)
