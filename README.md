@@ -47,7 +47,7 @@ BackEnd de secours : [![Heroku](https://img.shields.io/badge/Heroku-%23430098.sv
 
 ### Resultat attendu
 
-<a href="https://lereacteur-react-deliveroo.netlify.com/" target="_blank">
+<a href="https://lereacteur-vinted.netlify.app/" target="_blank">
 <img align="center" height="490em" src="./src/img/Screenshot.png"/>
 </a>
 
